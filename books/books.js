@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
     res.send("This is our main endpoint!");
 })
 
+app.post("/book", (req, res) => {
+    res.send("Testing our book routes!");
+})
+
 app.listen(4545, () => {
     console.log("Up and running! -- This is our Books service");
 })
