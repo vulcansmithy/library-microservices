@@ -1,6 +1,9 @@
 // Load express
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
 
 // Load mongoose
 const mongoose = require("mongoose");
@@ -15,6 +18,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/book", (req, res) => {
+    console.log(req.body);
     res.send("Testing our book routes!");
 })
 
